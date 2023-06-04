@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+:root{
+    --first: #fff;
+    --second: #1d002c;
+    --third: blue;
+    --four: #fff;
+}
+.theme{
+    --first: #1e0029;
+    --second: #fff;
+    --third: #1b1b1b;
+    --four: blue;
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--first);
+}
+.container .menu{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    margin: 0px auto;
+}
+.menu .logo_text{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--second);
+}
+.menu nav{
+    display: flex;
+    padding: 30px 0px;
+}
+.menu nav ul{
+    display: flex;
+    margin-right: 10px;
+}
+.menu nav ul li{
+    list-style: none;
+    margin: 0px 15px;
+    position: relative;
+}
+.menu nav ul li span{
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    border-radius: 200px;
+    background-color: #ff1aec;
+    bottom: -5px;
+    left: 0px;
+    transition: 0.3s;
+}
+.menu nav ul li:hover span{
+    width: 100%;
+}
+.menu nav ul li a{
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--second);
+}
+
+/* ---------- Toggle button ---------- */
+.button{
+    width: 60px;
+    height: 30px;
+    display: inline-block;
+    background-color: #f2f2f2;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+}
+.button span{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 200px;
+    margin: 5px;
+    left: 0px;
+    transition: 0.2s;
+}
+
+.button .tool_tip{
+    position: absolute;
+    top: 10px;
+    left: -8px;
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    pointer-events: none;
+    font-size: 18px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.2s;
+    transition-delay: 0.5s;
+}
+.button:hover .tool_tip{
+    opacity: 1;
+    top: 50px;
+}
+input[type="checkbox"]:checked + span{
+    left: 30px;
+    background-color: #ff1aec;
+}
+input[type="checkbox"]{
+    display: none;
+}
+
+
