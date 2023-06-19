@@ -104,6 +104,57 @@
     opacity: 1;
     top: 50px;
 }
+
+button2{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background:var(--main-color);
+    /* border-radius: 6px; */
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all .45s ease;
+}
+
+.btn:hover{
+    transform: scale(0.9);
+}
+
+.btn2{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-left: 35px;
+}
+
+.btn2 span i{
+    height: 55px;
+    width: 55px;
+    background: var(--main-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: all .45s ease;
+}
+
+.btn2 span i:hover{
+    transform: scale(1.1) translateY(5px);
+}
+
 input[type="checkbox"]:checked + span{
     left: 30px;
     background-color: #ff1aec;
