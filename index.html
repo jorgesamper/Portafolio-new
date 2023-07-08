@@ -4,29 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toogle portafolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <title>DEV DESIGN3R</title>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--icons-->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    
-    <header class="container">
-        <div class="menu">
-            <div class="logo_text">jorgesamper.</div>
-            <nav>
-                <ul>
-                    <li><a href="#">Sobre mí</a><span></span></li>
-                    <li><a href="#">Servicios</a><span></span></li>
-                    <li><a href="#">Contacto</a><span></span></li>
-                </ul>
-                <label class="button">
-                    <input type="checkbox" class="checkbox">
-                    <span></span>
-                </label>
-            </nav>
-        </div>
-    </header>
 
+    
+    
+    <!--header design-->
+    <header class="header">
+        <!-- ON SCROLL  -->
+        <div class="progress">
+            <span class="bar"></span>
+        </div>
+        
+        <a href="#" class="logo">jSamp<span>e</span>r.</a>
+        
+        <ul class="navlist">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#sobre-mí">Sobre mí</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <label class="button-toogle">
+            <input type="checkbox" class="checkbox">
+            <span></span>
+        </label>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+    </header>
+    
+
+    <!--home section design-->
     <section class="home" id="home">
 
         <div class="home-text">
@@ -38,15 +59,325 @@
             <h3>UI/UX Designer<span> & Front-end.</span></h3>
             <p>Diseño resolviendo problemas y creando experiencias digitales para las personas</p>
 
-            <div class="button2">
+            <div class="button">
                 <a href="#" class="btn">¿Hablamos?</a>
-                <a href="img/music/3182.mp3" class="btn2" id="btn2"><span id="playPauseIcon"><i class="bx bx-play"></i></span>Escucha una canción</a>
-                <audio id="audioPlayer" src="img/music/3182.mp3"></audio>
+                <audio id="audio" src="img/music/3182.mp3"></audio>
+                <a href="#" class="btn2" id="btn2" onclick="playPause()">
+                    <span id="playPauseBTN">
+                        <i class="bx bx-play"></i>
+                    </span>Escucha una canción
+                </a>
             </div>
 
     </section>
-
     
-</body>
+    <!--about me section design-->
+    <section class="about" id="sobre-mí">
+    
+        <div class="about-text">
+            <h2>Sobre<span> mí</span></h2>
+            <h4>UX/UI Creative Designer</h4>
+            <p>Soy Diseñador multidisciplinar con sede en Madrid.</p>
+            <p>Aplico mis conocimientos en Diseño y Experiencia de usuario, Web responsive, Apps, Maquetación básica HTML/CSS, Sistemas de diseño, Arquitecura de Información, Metodologías ágiles, Prototipos wireframes baja y alta fidelidad, Análisis heurísticos, Pruebas de usuario, Técnicas de investigación, Benchmarking, Modelos de negocio, Encuestas, Entrevistas, Pixel Perfect.</p>
+            <p>Si quieres saber más sobre mi ponte en <a href="#contacto">contacto.</a></p>
+            
+        </div>
 
+    </section>
+
+     <!--service section design-->
+     <section class="services" id="servicios">
+        <div class="main-text">
+            <p class="main-text-tittle">Portafolio</p>
+            <h2 class="main-text-tittle">Servicios</h2>
+        </div>
+
+        <div class="services-container">
+            <div class="services-content">
+                <div class="box">
+                    <div class="s-icons">
+                        <i class='bx bx-mobile-alt'></i>
+                    </div>
+                    <h3>UX/UI Design</h3>
+                    <p>Diseño de Interfaz de Usuario, Diseño de prototipos, Ivestigación, Creación Wireframes, Pruebas de Usabilidad.Diseño gráfico y web.</p>
+
+                </div>
+            </div>
+    
+            <div class="services-content">
+                <div class="box">
+                    <div class="s-icons">
+                        <i class='bx bx-code-alt' ></i>
+                    </div>
+                    <h3>Web Developer</h3>
+                    <p>Construcción del diseño en código aplicando JavaScript agregando interactividad y funcionalidad. Adaptabilidad a diferentes dispositivos</p>
+                   
+                </div>
+
+            </div>
+    
+            <div class="services-content">
+                <div class="box">
+                    <div class="s-icons">
+                        <i class='bx bx-cube-alt' ></i>
+                    </div>
+                    <h3>3D Design</h3>
+       
+                    <p>Diseño de espacios en 3D, modelado y Renderizado. Planimetrías y documentación necesaria para su ejecución.</p>
+                    
+                </div>
+            </div>
+        </div>
+-----
+<section class="main-text">
+        <div class="main-text-portafolio">
+            <p class="main-text-tittle">Portafolio</p>
+            <h2 class="main-text-tittle">Proyectos</h2>
+        </div>
+</section>
+    <!-- PROYECTO 1  -->
+    <div class="main-text">
+        <div class="main-text-portafolio">
+            <div class="tittle-split">
+                <h4 class="num1 d-inline mr-2">01</h4>
+                <h4 class="d-inline">Tú Asistente médico</h4>
+            </div>
+            <h1 class="h3 mt-3">vitality</h1>
+                <div class="image-container">
+                    <img class="img1 img-fluid" src="img/vitalityapp.png">
+                </div>
+                <div class="split">
+                    <p><strong>Soporte</strong><br>App/web</br></p>
+                    <p><strong>Año</strong><br>2022</br></p>
+                </div>
+                <a href="#" class="btn subheading custom-btn">Ver proyecto</a>
+            </div>
+            
+    </div>
+
+    <!-- PROYECTO 2  -->
+    <div class="right">
+        <div class="main-text">
+            <div class="main-text-portafolio ">
+                <h4 class="num2">02 </h4>
+                <h4>El banco que funciona sin dinero</h4>
+
+                <h1 class="h1">eónbank</h1>
+            <div class="two-right">
+                <img src="img/eonbank.png">
+            </div>
+                <div class="split">
+                    <p class=""><strong>Soporte</strong><br>App/web</br></d>
+                    <p class=""><strong>Año</strong><br>2022</br></d>
+                </div>
+                <a href="#" class="btn subheading custom-btn2">Ver proyecto</a>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <!-- PROYECTO 3  -->
+    <div class="main-text">
+        <div class="main-text-portafolio ">
+            <h4 class="num3">03</h4>
+            <h4>Una nueva experiencia en el grupo</h4>
+            <h1 class="h1">whatshapp</h1>
+        <div class="two-right">
+            <img src="img/whatshapp2.png">
+        </div>
+            <div class="split">
+                <p class=""><strong>Soporte</strong><br>App/web</br></>
+                <p class=""><strong>Año</strong><br>2022</br></>
+            </div>
+            <a href="#" class="btn subheading custom-btn3">Ver proyecto</a>
+        </div>
+    </div>
+
+
+    <!-- PROYECTO 4  -->
+    <div class="main-text">
+        <div class="main-text-portafolio d-flex align-items-center">
+            <h4 class="num4">04</h4>
+            <h4 class="">Gestión para comunidades de vecinos</h4>
+            <h1 class="h1">myHome</h1>
+        <div class="two-right">
+            <img src="img/myhomeapp.png">
+        </div>
+            <div class="split">
+                <p class=""><strong>Soporte</strong><br>App/web</br></>
+                <p class=""><strong>Año</strong><br>2022</br></>
+            </div>
+            <a href="#" class="btn subheading custom-btn4">Ver proyecto</a>
+        </div>
+    </div>
+
+</div>
+
+   
+
+
+
+
+
+
+
+
+    <!--portafolio 3D DESIGN-->
+    <section class="portafolio" id="portafolio">
+        <div class="main-text">
+            <p class="main-text-tittle">Portafolio</p>
+            <h2 class="main-text-tittle"><span>Proyectos</span> 3D</h2>
+        </div>
+
+        <div class="portafolio-content">
+
+            <div class="row">
+                <img src="img/gallery1.png" alt="Jorge Samper 2">
+               
+            </div>
+
+            <div class="row">
+                <img src="img/gallery4.png">
+                
+            </div>
+
+            <div class="row">
+                <img src="img/gallery3.png">
+                
+            </div>
+
+
+        </div>
+        <div class="portafolio-content">
+
+            <div class="row">
+                <img src="img/gallery5.png" alt="Jorge Samper 2"> 
+            </div>
+
+            <div class="row">
+                <img src="img/gallery2.png">
+            </div>
+
+            <div class="row">
+                <img src="img/gallery6.png"">
+            </div>
+
+        </div>
+        
+    <!--CONTACTO-->
+    
+    </section>
+
+    <section class="portafolio" id="contacto">
+        <div class="main-text">
+            <p class="main-text-tittle">¿Hablamos?</p>
+            <h2 class="main-text-tittle">Contacto</h2>
+        </div>
+
+        <form class="form">
+          
+            <div class="group">      
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Nombre *</label>
+            </div>
+
+            <div class="group">      
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Teléf</label>
+            </div>
+              
+            <div class="group">      
+              <input type="text" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Email *</label>
+            </div>
+
+            <div class="group">      
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Mensaje *</label>
+            </div>
+            <div class="button">
+                <a href="#" class="btn">Enviar</a>
+            </div>
+            
+          </form>
+    </section>
+
+
+    <div>
+  
+        <p class="footer">
+          a <a href="" target="_blank">Lnkdn</a> by <a href="" target="_blank">GitHub</a>
+        </p>
+        
+    </div>
+ 
+</section>
+
+    <div class="footer__copy text-center">
+        <p class="mx-auto">Copyright©2023 con ❤️ y mucho ☕️</p>
+    </div>
+
+    <!--custom js-->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+   <script> 
+   
+   // button music
+        var audio = document.getElementById("audio");
+        var playPauseBTN = document.getElementById("playPauseBTN");
+    
+        function playPause() {
+            if (audio.paused) {
+                audio.play();
+                playPauseBTN.innerHTML = '<i class="bx bx-pause"></i>';
+            } else {
+                audio.pause();
+                playPauseBTN.innerHTML = '<i class="bx bx-play"></i>';
+            }
+        }
+    // scroll
+        window.addEventListener("scroll", function() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollProgress = (scrollTop / scrollHeight) * 100;
+        document.querySelector(".bar").style.width = scrollProgress + "%";
+        });
+
+    // Obtener todos los enlaces de la lista de navegación
+const navLinks = document.querySelectorAll('.navlist a');
+
+// Agregar evento scroll para detectar cambios en la sección visible
+window.addEventListener('scroll', function() {
+    // Obtener la posición actual del scroll
+    const scrollPosition = window.pageYOffset;
+
+    // Iterar sobre los enlaces y comprobar si la sección correspondiente está visible
+    navLinks.forEach(function(link) {
+        const target = document.querySelector(link.getAttribute('href'));
+        const sectionTop = target.offsetTop;
+        const sectionHeight = target.offsetHeight;
+
+        // Verificar si la sección está visible en el viewport
+        if (scrollPosition >= sectionTop && scrollPosition < (sectionTop + sectionHeight)) {
+            // Agregar la clase .active al enlace correspondiente
+            link.classList.add('active');
+        } else {
+            // Quitar la clase .active de los demás enlaces
+            link.classList.remove('active');
+        }
+    });
+});
+
+    </script>
+</body>
 </html>
