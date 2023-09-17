@@ -21,6 +21,7 @@
 
     
     <div id="cursor"></div>
+    
 
     <!--header design-->
     <header class="header">
@@ -439,34 +440,31 @@ const typed = new Typed('.typed',{
     
 // Scroll to Top
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("El DOM ha cargado"); // Agrega esto para verificar si se ejecuta
+            const scrollToTopButton = document.getElementById("scrollToTopBtn");
 
-    const scrollToTopButton = document.getElementById("scrollToTopBtn");
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
 
-    // Función para desplazarse al principio de la página
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth" // Desplazamiento suave
+            if (scrollToTopButton) {
+                scrollToTopButton.addEventListener("click", scrollToTop);
+            }
+
+            window.addEventListener("scroll", function () {
+                const firstSection = document.getElementById("bottom-section");
+                const firstSectionTop = firstSection.getBoundingClientRect().top;
+                const firstSectionHeight = firstSection.offsetHeight;
+
+                if (firstSectionTop > 0 && firstSectionTop < firstSectionHeight) {
+                    scrollToTopButton.classList.add("showBtn");
+                } else {
+                    scrollToTopButton.classList.remove("showBtn");
+                }
+            });
         });
-    }
-
-    // Agregar un controlador de eventos al botón si existe
-    if (scrollToTopButton) {
-        scrollToTopButton.addEventListener("click", scrollToTop);
-    }
-
-    // Controlar la visibilidad del botón en función del desplazamiento
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 100) {
-            // Si el desplazamiento es mayor que 100px, mostrar el botón
-            scrollToTopButton.classList.add("showBtn");
-        } else {
-            // De lo contrario, ocultar el botón
-            scrollToTopButton.classList.remove("showBtn");
-        }
-    });
-});
 
 
    
