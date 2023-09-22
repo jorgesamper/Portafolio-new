@@ -18,35 +18,65 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+ <!-- ON SCROLL  -->
+    <div class="progress">
+        <span class="bar"></span>
+    </div>
 
-    
+
+
+    <nav id="nav" class="navbar dark-mode" role="navigation">
+        <a href="#home" class="navbar__logo">jSamp/>er.</a>    
+        <ul class="navbar__links">
+          <li class="navbar__link first"><a href="#home">Home</a></li>
+          <li class="navbar__link second"><a href="#sobre-mí">Sobre mí</a></li>
+          <li class="navbar__link third"><a href="#servicios">Servicios</a></li>
+          <li class="navbar__link four"><a href="#proyectos">Proyectos</a></li>
+          <li class="navbar__link fifth"><a href="#contacto">Contacto</a></li>
+        </ul>   
+        <button class="burger">
+          <span class="bar"></span>  
+        </button>   
+      </nav>
+
+
     <div id="cursor"></div>
+    
 
     <!--header design-->
-    <header class="header">
-        <!-- ON SCROLL  -->
-        <div class="progress">
-            <span class="bar"></span>
-        </div>
+    <!-- <header class="header" id="nav"> -->
+       
+        <!-- 
         
         <a href="#home" class="logo-principal">jSamp<span>e</span>r.</a>
         
-        <ul class="navlist">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#sobre-mí">Sobre mí</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-
-        <label class="button-toogle">
-            <input type="checkbox" class="checkbox">
-            <span></span>
+        <input type="checkbox" class="checkbox" id="menu-checkbox">
+        <label class="button-toggle" for="menu-checkbox">
+            <span class="menu-icon"></span>
         </label>
 
-        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navlist">
+            <li class="nav__item"><a href="#home" class="nav_links"">Home</a></li>
+            <li class="nav__item"><a href="#sobre-mí" class="nav_link">Sobre mí</a></li>
+            <li class="nav__item"><a href="#servicios" class="nav_link">Servicios</a></li>
+            <li class="nav__item"><a href="#proyectos" class="nav_link">Proyectos</a></li>
+            <li class="nav__item"><a href="#contacto" class="nav_link">Contacto</a></li>
+        </ul>
 
-    </header>
+        <a href="#nav" class="nav__hamburguer hidden" id="mobile-menu-icon">
+            <img src="img/menu.svg" class="nav__icon">
+        </a>
+
+        <a href="#" class="nav__close">
+            <img src="img/close.svg" class="nav__icon">
+        </a>
+         -->
+
+        <!-- <input type="checkbox" class="checkbox" id="menu-icon-checkbox">
+        <label class="button-toggle" for="menu-icon-checkbox">
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </label> -->
+    <!-- </header> -->
   
 
     <!--home section design-->
@@ -64,9 +94,9 @@
             <div class="button">
                 <a href="#contacto" class="btn" style="color:#ffffff">¿Hablamos?</a>
                 <audio id="audio" src="img/music/3182.mp3"></audio>
-                <a href="#" class="btn2" id="btn2" onclick="playPause()">
-                    <span id="playPauseBTN">
-                        <i class="bx bx-play " ></i>
+                <a class="btn2" id="btn2" onclick="playPause()">
+                    <span class="shadow-pause" id="playPauseBTN">
+                        <i class="bx bx-play "></i>
                     </span>Escucha una canción
                 </a>
             </div>
@@ -92,9 +122,11 @@
         <div class="about-text">
             <h2>Sobre<span> mí</span></h2>
             <h4>Front-End | UX/UI & 3D Designer</h4>
-            <p>Soy Diseñador multidisciplinar con sede en Madrid.</p>
-            <p>Aplico mis conocimientos en Diseño y Experiencia de usuario, Web responsive, Apps, Maquetación básica HTML/CSS, Sistemas de diseño, Arquitecura de Información, Metodologías ágiles, Prototipos wireframes baja y alta fidelidad, Análisis heurísticos, Pruebas de usuario, Técnicas de investigación, Benchmarking, Modelos de negocio, Encuestas, Entrevistas, Pixel Perfect.</p>
-            <p>Si quieres conocer más sobre mí, descarga mi <a href="img\CV Jorge Samper FRONT END.pdf" style="color:#ff1aec"><strong>currículum.</strong></a></p>
+            <p>¡Hola! 👋🏼 Soy Jorge, Desarrollador y Diseñador multidisciplinar en Madrid.</p>
+            <p>Especializado en Front-end con tecnologías como HTML5, CSS3, JavaScript, React y también en proyectos Full Stack con Python, Node.js y Flask. Enfocado en diseño responsivo, UX/UI, Prototipos Web y App...</p>
+f            <p>Si quieres conocer más sobre mí, ponte en <a href="#contacto" style="color:#ff1aec"><strong>contacto.</strong></a></p>
+            <!-- <p>Si quieres conocer más sobre mí, descarga mi <a href="img\CV Jorge Samper FRONT END.pdf" style="color:#ff1aec"><strong>currículum.</strong></a></p> -->
+
             <h4>Digital Skills</h4>
                 <div class="logo-grid">
                     <figure class="logo"><svg viewBox="0 0 128 128" width="50%" height="100%"><g fill="#61DAFB"><circle cx="64" cy="64" r="11.4"></circle><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"></path></g></svg></figure>
@@ -213,7 +245,7 @@
 
                 <h1 class="h1">eónbank</h1>
             <div class="two-right">
-                <img src="img/eonbank.png">
+                <img src="img/eonbank mockup.png">
             </div>
                 <div class="split">
                     <p class=""><strong>Soporte</strong><br>App/web</br></d>
@@ -255,7 +287,7 @@
         </div>
             <div class="split">
                 <p class=""><strong>Soporte</strong><br>App/web</br></d>
-                <p class=""><strong>Año</strong><br>2022</br></>
+                <p class=""><strong>Año</strong><br>2022</br></h>
             </div>
             <a href="#" class="btn subheading custom-btn4">Ver proyecto</a>
         </div>
@@ -283,17 +315,15 @@
 
             <div class="row">
                 <img src="img/gallery1.png" alt="Jorge Samper 2">
-               
             </div>
 
             <div class="row">
-                <img src="img/gallery4.png">
-                
+                <img src="img/gallery4.png">    
             </div>
 
             <div class="row">
                 <img src="img/gallery3.png">
-                
+     
             </div>
 
 
@@ -324,39 +354,42 @@
             <h2 class="main-text-tittle">Contacto</h2>
         </div>
 
-        <form class="form">
+        <form class="form" action="https://formsubmit.co/jorgesamper7@gmail.com" method="POST">
           
             <div class="group">      
-                <input type="text" required>
+                <input type="text" required name="Nombre">
                 <span class="highlight"></span>
-                <span class="bar"></span>
+                <span class=""></span>
                 <label>Nombre *</label>
             </div>
 
             <div class="group">      
-                <input type="text" required>
+                <input type="text" required name="Teléfono">
                 <span class="highlight"></span>
-                <span class="bar"></span>
+                <span class=""></span>
                 <label>Teléf</label>
             </div>
               
             <div class="group">      
-              <input type="text" required>
+              <input type="text" required name="Email">
               <span class="highlight"></span>
-              <span class="bar"></span>
+              <span class=""></span>
               <label>Email *</label>
             </div>
 
             <div class="group">      
-                <input type="text" required>
+                <input type="text" required name="Mensaje">
                 <span class="highlight"></span>
-                <span class="bar"></span>
+                <span class=""></span>
                 <label>Mensaje *</label>
             </div>
             <div class="button">
-                <a href="#" class="btn">Enviar</a>
+                <a type="submit" class="btn" value=>Enviar</a>
             </div>
-            
+
+            <input type="hidden" name="_next" value="">
+            <input type="hidden" name="_captcha" value="false">
+             
           </form>
     </section>
 
@@ -365,9 +398,9 @@
   
         <p class="footer">
           <a href="https://www.linkedin.com/in/jorgesamperarias/" target="_blank">Lnkdn</a>
-          <a href="" target="_blank">Whatshapp</a>
-          <a href="" target="_blank">Instagram</a>
           <a href="https://github.com/jorgesamper" target="_blank">GitHub</a>
+
+          <a href="" target="_blank">Whatshapp</a>
         </p>
         
     </div>
@@ -396,31 +429,49 @@ function redirectToProyectos3D() {
     window.location.href = "#proyectos3D";
 }
 
+ //  MENU RESPONSIVE
+function toggleMenu () {  
+  const navbar = document.querySelector('.navbar');
+  const burger = document.querySelector('.burger');
+  
+  burger.addEventListener('click', (e) => {    
+    navbar.classList.toggle('show-nav');
+  });    
+  // bonus
+  const navbarLinks = document.querySelectorAll('.navbar a');
+  navbarLinks.forEach(link => {
+    link.addEventListener('click', (e) => {    
+      navbar.classList.toggle('show-nav');
+    }); 
+  })
+   
+}
+toggleMenu();
 
    //  BOTON TOOGLEEE
-   document.addEventListener("DOMContentLoaded", function () {
-  let button = document.querySelector(".button-toogle");
-  let checkbox = document.querySelector(".checkbox");
+//    document.addEventListener("DOMContentLoaded", function () {
+//   let button = document.querySelector(".button-toogle");
+//   let checkbox = document.querySelector(".checkbox");
 
-  button.addEventListener("click", function () {
-    checkbox.checked = !checkbox.checked; // Cambiar el estado del checkbox
+//   button.addEventListener("click", function () {
+//     checkbox.checked = !checkbox.checked; // Cambiar el estado del checkbox
 
-    if (checkbox.checked) {
-      document.body.classList.add("theme");
-    } else {
-      document.body.classList.remove("theme");
-    }
-  });
-});
+//     if (checkbox.checked) {
+//       document.body.classList.add("theme");
+//     } else {
+//       document.body.classList.remove("theme");
+//     }
+//   });
+// });
 
 //Changing-Phrase*
 
 const typed = new Typed('.typed',{
     strings: [
         'experiencias digitales centradas en el usuario.',
-        'interfaces intuitivas y atractivas',
-        'experiencias visuales',
-        'soluciones web a medida',
+        'interfaces intuitivas y atractivas.',
+        'experiencias visuales.',
+        'soluciones Web a medida.',
         'productos digitales...'
     ],
     stringsElement: '#cadenas-texto',
@@ -439,34 +490,39 @@ const typed = new Typed('.typed',{
     
 // Scroll to Top
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("El DOM ha cargado"); // Agrega esto para verificar si se ejecuta
-
     const scrollToTopButton = document.getElementById("scrollToTopBtn");
+    const serviciosSection = document.getElementById("servicios");
 
-    // Función para desplazarse al principio de la página
     function scrollToTop() {
         window.scrollTo({
             top: 0,
-            behavior: "smooth" // Desplazamiento suave
+            behavior: "smooth"
         });
     }
 
-    // Agregar un controlador de eventos al botón si existe
     if (scrollToTopButton) {
         scrollToTopButton.addEventListener("click", scrollToTop);
     }
 
-    // Controlar la visibilidad del botón en función del desplazamiento
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 100) {
-            // Si el desplazamiento es mayor que 100px, mostrar el botón
-            scrollToTopButton.classList.add("showBtn");
+        const serviciosSectionTop = serviciosSection.getBoundingClientRect().top;
+
+        if (serviciosSectionTop < 0) {
+            scrollToTopButton.style.display = "block";
         } else {
-            // De lo contrario, ocultar el botón
-            scrollToTopButton.classList.remove("showBtn");
+            scrollToTopButton.style.display = "none";
         }
     });
 });
+
+
+1 / 2
+
+
+
+
+
+
 
 
    
@@ -479,9 +535,13 @@ document.addEventListener("DOMContentLoaded", function () {
             if (audio.paused) {
                 audio.play();
                 playPauseBTN.innerHTML = '<i class="bx bx-pause"></i>';
+                playPauseBTN.classList.add("active"); // Agregar una clase cuando esté sonando
+
             } else {
                 audio.pause();
                 playPauseBTN.innerHTML = '<i class="bx bx-play"></i>';
+                playPauseBTN.classList.remove("active"); // Quitar la clase cuando esté en pausa
+
             }
         }
     // scroll
