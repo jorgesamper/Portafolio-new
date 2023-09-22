@@ -490,6 +490,7 @@ const typed = new Typed('.typed',{
     
 // Scroll to Top
 document.addEventListener("DOMContentLoaded", function () {
+<<<<<<< HEAD
     const scrollToTopButton = document.getElementById("scrollToTopBtn");
     const serviciosSection = document.getElementById("servicios");
 
@@ -514,6 +515,33 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+=======
+            const scrollToTopButton = document.getElementById("scrollToTopBtn");
+
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+
+            if (scrollToTopButton) {
+                scrollToTopButton.addEventListener("click", scrollToTop);
+            }
+
+            window.addEventListener("scroll", function () {
+                const firstSection = document.getElementById("bottom-section");
+                const firstSectionTop = firstSection.getBoundingClientRect().top;
+                const firstSectionHeight = firstSection.offsetHeight;
+
+                if (firstSectionTop > 0 && firstSectionTop < firstSectionHeight) {
+                    scrollToTopButton.classList.add("showBtn");
+                } else {
+                    scrollToTopButton.classList.remove("showBtn");
+                }
+            });
+        });
+>>>>>>> refs/remotes/origin/main
 
 
 1 / 2
